@@ -22,21 +22,10 @@ class DashboardController extends Controller
         $db_oa_central = Yii::getAlias('@db_oa_central');
         //获取内存
         $memory = (int)((memory_get_usage()/1024)/8192*100);
-        //查询所有公司
-        $company = Management::find()->all();
         //查询所有用户
         $user = Yii::$app->db->createCommand("select * from ".$db_oa_central.".user")->queryAll();
         //查询当月营业额
         $dataTurnover = Yii::$app->db->createCommand("select DATE_FORMAT(start_time,'%Y-%m') as time,ROUND(sum(total_price),2) as total from ".$db_oa_central.".order where state =1 GROUP BY time HAVING time = DATE_FORMAT(NOW(),'%Y-%m')")->queryAll();
-        //查询当月新增公司
-        $createAt = date("Y-m",time());
-        $thisDateNewCompany = Management::find()->where(['DATE_FORMAT(created_at,\'%Y-%m\')'=>$createAt])->all();
-        //查询当前在线人数
-        $currentOnlineNumber = Yii::$app->db->createCommand("select * from ".$db_oa_central.".user_http_session")->queryAll();
-        $CurrentOnline = new CurrentOnline();
-        $CurrentOnline->insert_time = date("Y-m-d",time())." ".(date("H",time())+8).date(":i:s",time());
-        $CurrentOnline->current_online = count($currentOnlineNumber);
-        $CurrentOnline->save();
         //查询最高在线人数
         $sql = "select MAX(current_online) AS current_online from highest_current_online";
         $highestCurrentOnline = Yii::$app->db->createCommand($sql)->queryOne();
@@ -70,14 +59,11 @@ class DashboardController extends Controller
         }
 
         $array['userTotal'] = count($user);
-        $array['companyTotal'] = count($company);
         if($dataTurnover==null){
             $array['dataTurnover']=0;
         }else {
             $array['dataTurnover'] = $dataTurnover['0']['total'];
         }
-        $array['thisDateNewCompany'] = count($thisDateNewCompany);
-        $array['currentOnline'] = count($currentOnlineNumber);
         $array['highestCurrentOnline'] = $highestCurrentOnline['current_online'];
         return $this->render('show',[
             'array'=>$array,
