@@ -8,7 +8,11 @@ use yii\filters\AccessControl;
 use backend\models\RegadminForm;
 use common\models\User;
 
-
+/**
+ * 修改密码
+ * Class UpdatepwdController
+ * @package backend\controllers
+ */
 class UpdatepwdController extends Controller
 {
     public function actionFind(){

@@ -9,6 +9,7 @@ use backend\models\Master;
 use common\models\User;
 
 /**
+ * 用户重置密码
  * Site controller
  */
 class ResetController extends Controller

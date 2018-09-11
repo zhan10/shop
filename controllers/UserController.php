@@ -6,7 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\data\Pagination;
-use common\models\User;
+use backend\models\User;
 use backend\models\Master;
 use backend\models\Admin;
 
