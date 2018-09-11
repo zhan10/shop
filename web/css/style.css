@@ -1,0 +1,91 @@
+html, body {
+	width: 100%;
+	height: 100%;
+	font-family: "微软雅黑";
+	background: #b1b1b1;
+}
+* {
+	padding: 0px;
+	margin: 0px;
+}
+ul, li {
+	list-style: none;
+}
+.container {
+	width: 560px;
+	height: 250px;
+	/*padding: 40px 20px;
+	background: #fff;
+	border-radius: 4px;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-left: -280px;
+	margin-top: -200px;*/
+}
+.container ul.data-list {
+	width: 40%;
+	height: 100%;
+	border: 1px solid #d2d6de;
+	float: left;
+	overflow: auto;
+}
+.container ul.data-list h4 {
+	color: #333;
+	text-indent: 10px;
+	line-height: 36px;
+	border-bottom: 1px #e5e5e5 solid;
+}
+.container ul.data-list li {
+	line-height: 32px;
+	padding: 0px 10px;
+	font-size: 14px;
+	color: #666;
+}
+.container ul.data-list li:hover {
+	background-color: #C5EFFF;
+	color: #252525;
+	cursor: pointer;
+	font-weight: bold;
+}
+.container ul.data-list li.selected {
+	background-color: #0095E8;
+	color: #fff;
+}
+.button-box {
+	float: left;
+	width: 19%;
+	height: 50%;
+	margin-top: 15%;
+}
+.button-box span{
+	display:block;
+    width:43px;
+    height:28px;
+    text-align: center;
+    position: relative;
+    cursor:pointer;
+    border:1px solid #d9d9d9;
+    border-radius:4px;
+    background-color:#f3f3f3;
+    margin-left: 30px;
+}
+.button-box span#add{
+    background-image:url("../images/img_btn.png");
+    background-position: 5px -56px;
+    background-repeat: no-repeat;
+    margin-bottom: 20px;
+}
+.button-box span#add:hover{
+    background:url("../images/img_btn.png") #00a0e8;
+    background-position: 5px -86px;
+}
+.button-box span#remove{
+    background-image:url("../images/img_btn.png");
+    background-position: 5px 0;
+    background-repeat: no-repeat;
+}
+.button-box span#remove:hover{
+    background:url("../images/img_btn.png") #00a0e8;
+    background-position: 5px -29px;
+}

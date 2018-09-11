@@ -1,0 +1,79 @@
+.but{
+    position: absolute;
+    left: 85%;
+}
+.butClose{
+    position: absolute;
+    left: 85%;
+}
+.status{
+    background-color:#46be8a;
+    padding: .25em .6em .25em;
+    border-radius: .3em;
+    color: #fff;
+}
+.statusBan{
+    background-color: #f96868;
+}
+.level{
+    color: #fff;
+    background-color: #526069;
+    padding: 3px 6px;
+    display: inline-block;
+    font-weight: 700;
+    vertical-align: middle;
+    border-radius: 10px;
+}
+#particularsShow{
+    display:none;
+}
+#consumptionMoney{
+    display:none;
+}
+#addShow{
+    display:none;
+}
+#bg{
+    position: absolute;
+    top: -15%;
+    left: -2.8%;
+    width: 110%;
+    height: 130%;
+    background-color: black;
+    z-index:1001;
+    -moz-opacity: 0.7;
+    opacity:.70;
+    filter: alpha(opacity=70);
+}
+#ss{
+    position: absolute;
+    padding: 8px;
+    background-color: #FFFFFF;
+    z-index:1002;
+    overflow: auto;
+}
+#ss{
+    background-color:#EAEAEA;
+    width:1040px;
+    height: 520px;
+    position:fixed;
+    left:20%;
+    top:15%
+}
+#xx { background-color:#EAEAEA; width:1025px; height: 350px;margin-left:0.5% }
+.org-info{
+    margin-left: 30px;
+    margin: 30px 0 0 50px;
+}
+.org-info td{
+    padding: 15px 0;
+}
+.info-label{
+    width: 120px;
+}
+.info-content{
+    width: 240px;
+}
+.hide{
+    display: none;
+}
