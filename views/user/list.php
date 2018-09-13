@@ -47,7 +47,7 @@ $this->title = '用户管理';
                     邮箱：<input type="text" size="18" class="box_news"   name="email" placeholder="邮箱" value="">
                     <input type="submit"  class="clear_box" value="查询"/>
                     <?php ActiveForm::end(); ?>
-                    <span style="float:right;"><a href="index.php?r=user/index">添加</a></span>
+                    <span style="float:right;"><a href="/user/index">添加</a></span>
                 </div>
                 <!-- /.box-header -->
                 <div class="box-body">
