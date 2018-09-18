@@ -12,12 +12,10 @@ use Zend\Validator\File\Count;
 /**
  * Dashboard controller
  */
-class DashboardController extends Controller
+class DashboardController extends CommController
 {
     public function actionIndex(){
-        if (Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
+        $a = Yii::$app->request->post();
         return $this->render('show');
     }
 }
