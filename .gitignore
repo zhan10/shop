@@ -33,3 +33,4 @@ phpunit.phar
 /.vagrant
 /web/assets
 /runtime
+/web/ueditor/php
